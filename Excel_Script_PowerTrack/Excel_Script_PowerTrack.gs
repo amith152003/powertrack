@@ -11,7 +11,7 @@ function doGet(e) {
     var rowData = [];
     d=new Date();
     rowData[0] = d; // Timestamp in column A
-    rowData[1] = d.toLocaleTimeString(); // Timestamp in column A
+    rowData[1] = d.toLocaleTimeString(); // Timestamp in column B
     
     for (var param in e.parameter) {
       Logger.log('In for loop, param=' + param);
@@ -19,24 +19,24 @@ function doGet(e) {
       Logger.log(param + ':' + e.parameter[param]);
       switch (param) {
         case 'val1': //Parameter 1, It has to be updated in Column in Sheets in the code, orderwise
-          rowData[2] = value; //Value in column A
-          result = 'Written on column A';
+          rowData[2] = value; //Value in column C
+          result = 'Written on column C';
           break;
         case 'val2': //Parameter 2, It has to be updated in Column in Sheets in the code, orderwise
-          rowData[3] = value; //Value in column B
-          result += ' Written on column B';
-          break;
-        case 'val3': //Parameter 3, It has to be updated in Column in Sheets in the code, orderwise
-          rowData[4] = value; //Value in column C
-          result += ' Written on column C';
-          break;
-        case 'val4': //Parameter 4, It has to be updated in Column in Sheets in the code, orderwise
-          rowData[5] = value; //Value in column C
+          rowData[3] = value; //Value in column D
           result += ' Written on column D';
           break;
-        case 'val5': //Parameter 5, It has to be updated in Column in Sheets in the code, orderwise
-          rowData[6] = value; //Value in column C
+        case 'val3': //Parameter 3, It has to be updated in Column in Sheets in the code, orderwise
+          rowData[4] = value; //Value in column E
           result += ' Written on column E';
+          break;
+        case 'val4': //Parameter 4, It has to be updated in Column in Sheets in the code, orderwise
+          rowData[5] = value; //Value in column F
+          result += ' Written on column F';
+          break;
+        case 'val5': //Parameter 5, It has to be updated in Column in Sheets in the code, orderwise
+          rowData[6] = value; //Value in column G
+          result += ' Written on column G';
           break;  
         default:
           result = "unsupported parameter";
